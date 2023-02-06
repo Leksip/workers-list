@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { WorkersListComponent } from './components/workers-list/workers-list.component';
 import { WorkersFormComponent } from './components/workers-form/workers-form.component';
 import {AdminRouting} from './admin.routing';
+import {LayoutModule} from './layout/layout.module';
 
 
 
@@ -14,7 +15,8 @@ import {AdminRouting} from './admin.routing';
   ],
   imports: [
     CommonModule,
-    AdminRouting
+    AdminRouting,
+    LayoutModule
   ]
 })
 export class AdminModule { }

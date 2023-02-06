@@ -1,15 +1,26 @@
-import { Component } from '@angular/core';
-import {TuiDay} from '@taiga-ui/cdk';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute, Params} from '@angular/router';
+
 
 @Component({
   selector: 'app-start-page',
   templateUrl: './start-page.component.html',
   styleUrls: ['./start-page.component.scss']
 })
-export class StartPageComponent {
-  value: TuiDay | null = null;
+export class StartPageComponent implements OnInit{
 
-  onDayClick(day: TuiDay): void {
-    this.value = day;
-  }
+  message: string
+constructor(
+  private route: ActivatedRoute
+) {
+}
+
+ngOnInit() {
+  this.route.queryParams.subscribe((params: Params)=>{
+    if (params['authFailed']){
+      this.message = 'Сессия истекла, пожалуйста войдите заного'
+    }
+  })
+}
+
 }

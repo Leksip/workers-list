@@ -5,9 +5,14 @@ import { WorkerCardComponent } from './components/worker-card/worker-card.compon
 import { HeaderComponent } from './components/header/header.component';
 import {RouterLink} from '@angular/router';
 import {PublicRouting} from './public.routing';
-import { LoginPageComponent } from './components/login-page/login-page.component';
+import {LoginPageComponent } from './components/login-page/login-page.component';
 import {ReactiveFormsModule} from '@angular/forms';
-
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 
 @NgModule({
@@ -17,11 +22,22 @@ import {ReactiveFormsModule} from '@angular/forms';
     HeaderComponent,
     LoginPageComponent
   ],
+  exports: [
+    HeaderComponent
+  ],
   imports: [
     CommonModule,
     RouterLink,
     PublicRouting,
     ReactiveFormsModule,
+    MatDialogModule,
+    MatButtonModule,
+    MatButtonModule,
+    MatInputModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatProgressBarModule
   ]
 })
 export class PublicModule { }
