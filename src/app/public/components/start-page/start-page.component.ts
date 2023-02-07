@@ -20,6 +20,10 @@ ngOnInit() {
     if (params['authFailed']){
       this.message = 'Сессия истекла, пожалуйста войдите заного'
     }
+    if (params['regSuccess']){
+      this.message = 'Вы успешно зарегистрировались'
+      console.log(this.message)
+    }
   })
 }
 

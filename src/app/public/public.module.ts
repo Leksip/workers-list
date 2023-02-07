@@ -13,14 +13,18 @@ import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
-
+import {MatTabsModule} from '@angular/material/tabs';
+import { AuthDialogComponent } from './components/auth-dialog/auth-dialog.component';
+import { RegistrationPageComponent } from './components/registration-page/registration-page.component';
 
 @NgModule({
   declarations: [
     StartPageComponent,
     WorkerCardComponent,
     HeaderComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    AuthDialogComponent,
+    RegistrationPageComponent
   ],
   exports: [
     HeaderComponent
@@ -37,7 +41,8 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MatIconModule,
     MatFormFieldModule,
     MatIconModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatTabsModule
   ]
 })
 export class PublicModule { }

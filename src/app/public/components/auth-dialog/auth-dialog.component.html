@@ -1,0 +1,15 @@
+<div class="auth-dialog">
+  <mat-tab-group>
+    <mat-tab label="Вход">
+      <app-login-page
+        (closeDialog)="closeDialog()"
+      ></app-login-page>
+    </mat-tab>
+
+    <mat-tab label="Регистрация">
+      <app-registration-page
+        (closeDialog)="closeDialog()"
+      ></app-registration-page>
+    </mat-tab>
+  </mat-tab-group>
+</div>

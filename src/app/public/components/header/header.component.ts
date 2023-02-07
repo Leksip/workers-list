@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {MatDialog, MatDialogConfig} from '@angular/material/dialog';
-import {LoginPageComponent} from '../login-page/login-page.component';
+import {AuthDialogComponent} from '../auth-dialog/auth-dialog.component';
 
 @Component({
   selector: 'app-header',
@@ -14,6 +14,6 @@ constructor(
 }
   openDialog() {
     let dialogConfig = new MatDialogConfig();
-    const dialogRef = this.dialog.open(LoginPageComponent, dialogConfig);
+    const dialogRef = this.dialog.open(AuthDialogComponent, dialogConfig);
   }
 }
