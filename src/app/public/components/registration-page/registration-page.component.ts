@@ -3,6 +3,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {AuthService} from '../../services/auth.service';
 import {Router} from '@angular/router';
 import {NewUser} from '../../public-models';
+import {AlertService} from '../../../shared/alert.service';
 
 @Component({
   selector: 'app-registration-page',
@@ -27,6 +28,7 @@ export class RegistrationPageComponent {
     private fb: FormBuilder,
     public auth: AuthService,
     private router: Router,
+    private alertService: AlertService
   ) {
   }
 
@@ -41,15 +43,13 @@ export class RegistrationPageComponent {
       {
         next: () => {
           this.isLoading = false;
-          this.router.navigate(['/'],{
-            queryParams:{
-              regSuccess: true
-            }
-          })
+          this.router.navigate(['/']);
           this.closeDialog.emit();
+          this.alertService.success('Вы успешно зарегистрировались');
         },
         error: () => {
           this.isLoading = false;
+          this.alertService.warning('Произошла ошибка');
         }
       }
     );

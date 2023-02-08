@@ -7,24 +7,21 @@ import {ActivatedRoute, Params} from '@angular/router';
   templateUrl: './start-page.component.html',
   styleUrls: ['./start-page.component.scss']
 })
-export class StartPageComponent implements OnInit{
+export class StartPageComponent implements OnInit {
 
-  message: string
-constructor(
-  private route: ActivatedRoute
-) {
-}
+  message: string;
 
-ngOnInit() {
-  this.route.queryParams.subscribe((params: Params)=>{
-    if (params['authFailed']){
-      this.message = 'Сессия истекла, пожалуйста войдите заного'
-    }
-    if (params['regSuccess']){
-      this.message = 'Вы успешно зарегистрировались'
-      console.log(this.message)
-    }
-  })
-}
+  constructor(
+    private route: ActivatedRoute
+  ) {
+  }
+
+  ngOnInit() {
+    this.route.queryParams.subscribe((params: Params) => {
+      if (params['authFailed']) {
+        this.message = 'Сессия истекла, пожалуйста войдите заного';
+      }
+    });
+  }
 
 }

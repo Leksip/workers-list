@@ -1,0 +1,30 @@
+.alert {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  width: 200px;
+  opacity: .7;
+
+  &__warning {
+    background: #e7000085;
+    box-shadow: 0 2px 12px 2px rgb(114 20 20 / 62%)
+  }
+
+  &__success {
+    background: #4f9eff61;
+    box-shadow: 0 2px 5px 2px rgb(10 62 92 / 58%);
+  }
+
+  &__dialog {
+    padding: 10px;
+    border-radius: 10px;
+
+  }
+
+  &__text {
+    text-align: center;
+    margin: 0;
+    font-weight: bold;
+  }
+}
+

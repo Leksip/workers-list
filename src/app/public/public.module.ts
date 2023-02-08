@@ -16,6 +16,8 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatTabsModule} from '@angular/material/tabs';
 import { AuthDialogComponent } from './components/auth-dialog/auth-dialog.component';
 import { RegistrationPageComponent } from './components/registration-page/registration-page.component';
+import {SharedModule} from '../shared/shared.module';
+
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { RegistrationPageComponent } from './components/registration-page/regist
     MatFormFieldModule,
     MatIconModule,
     MatProgressBarModule,
-    MatTabsModule
+    MatTabsModule,
+    SharedModule
+
   ]
 })
 export class PublicModule { }
