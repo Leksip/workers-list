@@ -9,7 +9,7 @@ export interface Alert {
 @Injectable({
   providedIn: 'root'
 })
-export class AlertService {
+export class AlertService{
 
   public alert$ = new Subject<Alert>();
 
@@ -26,7 +26,8 @@ export class AlertService {
   warning(text: string) {
     this.alert$.next({
       type: 'warning',
-      text: text
+      text: text,
     });
   }
+
 }

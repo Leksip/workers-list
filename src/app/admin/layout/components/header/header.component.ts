@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {AuthService} from '../../../../public/services/auth.service';
+import {AlertService} from '../../../../shared/alert.service';
 
 @Component({
   selector: 'app-header',
@@ -8,10 +9,15 @@ import {AuthService} from '../../../../public/services/auth.service';
 })
 export class HeaderComponent {
 
-  constructor(private auth: AuthService) {
+  constructor(
+    private auth: AuthService,
+    private alertService: AlertService
+  ) {
   }
 
   logout() {
-    this.auth.logout()
+    this.auth.logout();
+    this.alertService.warning('Вы вышли из системы');
   }
+
 }

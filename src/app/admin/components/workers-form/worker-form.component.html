@@ -1,0 +1,92 @@
+<div class="worker-form">
+  <h1 class="worker-form__title">Добавление нового сотрудника</h1>
+  <form [formGroup]="form">
+    <div class="worker-form__input">
+      <mat-form-field class="example-form-field">
+        <mat-label>Clearable input</mat-label>
+        <input matInput type="text">
+      </mat-form-field>
+    </div>
+    <div class="worker-form__input">
+      <mat-form-field class="example-form-field">
+        <mat-label>Clearable input</mat-label>
+        <input matInput type="text">
+      </mat-form-field>
+    </div>
+    <div class="worker-form__input">
+      <mat-form-field class="example-form-field">
+        <mat-label>Clearable input</mat-label>
+        <input matInput type="text">
+      </mat-form-field>
+    </div>
+    <div class="worker-form__input">
+      <mat-form-field class="example-form-field">
+        <mat-label>Clearable input</mat-label>
+        <input matInput type="text">
+      </mat-form-field>
+    </div>
+    <div class="worker-form__input">
+      <mat-form-field class="example-form-field">
+        <mat-label>Clearable input</mat-label>
+        <input matInput type="text">
+      </mat-form-field>
+    </div>
+
+    <div class="worker-form__input">
+      <mat-form-field appearance="fill">
+        <mat-label>Social</mat-label>
+        <mat-select multiple formControlName="socials" (ngModelChange)="delete()">
+          <mat-option *ngFor="let social of socialList" [value]="social">{{social}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div formGroupName='social'>
+      <div class="worker-form__input">
+        <mat-form-field class="example-form-field" *ngIf="form.get('socials').value.includes('vk')">
+          <mat-label>VK</mat-label>
+          <input matInput formControlName="vk" type="text">
+        </mat-form-field>
+      </div>
+
+    </div>
+    <div class="worker-form__input">
+      <mat-form-field class="example-form-field">
+        <mat-label>Clearable input</mat-label>
+        <input matInput type="text">
+      </mat-form-field>
+    </div>
+    <div class="worker-form__input">
+      <mat-form-field class="example-form-field">
+        <mat-label>Clearable input</mat-label>
+        <input matInput type="text">
+      </mat-form-field>
+    </div>
+    <div class="worker-form__input">
+      <mat-form-field class="example-form-field">
+        <mat-label>Clearable input</mat-label>
+        <input matInput type="text">
+      </mat-form-field>
+    </div>
+    <div class="worker-form__input">
+      <mat-form-field class="example-form-field">
+        <mat-label>Clearable input</mat-label>
+        <input matInput type="text">
+      </mat-form-field>
+    </div>
+    <div class="worker-form__input">
+      <mat-form-field class="example-form-field">
+        <mat-label>Clearable input</mat-label>
+        <input matInput type="text">
+      </mat-form-field>
+    </div>
+    <div class="worker-form__input">
+      <mat-form-field class="example-form-field">
+        <mat-label>Clearable input</mat-label>
+        <input matInput type="text">
+      </mat-form-field>
+    </div>
+
+  </form>
+</div>
+
+<button (click)="test()">sdffsd</button>

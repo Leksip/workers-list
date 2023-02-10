@@ -29,7 +29,8 @@ import {SharedModule} from '../shared/shared.module';
     RegistrationPageComponent
   ],
   exports: [
-    HeaderComponent
+    HeaderComponent,
+    WorkerCardComponent
   ],
   imports: [
     CommonModule,
@@ -45,8 +46,7 @@ import {SharedModule} from '../shared/shared.module';
     MatIconModule,
     MatProgressBarModule,
     MatTabsModule,
-    SharedModule
-
+    SharedModule,
   ]
 })
 export class PublicModule { }

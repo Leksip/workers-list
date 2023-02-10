@@ -2,9 +2,10 @@
   <h1 class="admin-header__title">Title</h1>
   <nav class="admin-header__navigation">
     <ul class="admin-header__list">
-      <li class="admin-header__item">Список сотрудников</li>
+      <li class="admin-header__item" routerLink="./">Список сотрудников</li>
+      <li class="admin-header__item" routerLink='new'>Регистрация сторудников</li>
       <li class="admin-header__item">Блог</li>
     </ul>
   </nav>
-  <button class="admin-header__button-logout" (click)="logout()">Выход</button>
+  <button mat-raised-button class="admin-header__button-logout" (click)="logout()">Выход</button>
 </div>

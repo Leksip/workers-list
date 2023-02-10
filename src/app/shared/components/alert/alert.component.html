@@ -1,4 +1,4 @@
-<div class="alert" *ngIf="text">
+<div class="alert" *ngIf="type" [class.active]="text">
   <div class="alert__dialog"
        [ngClass]="{
   'alert__success': type === 'success',

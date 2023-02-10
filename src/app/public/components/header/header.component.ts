@@ -9,11 +9,12 @@ import {AuthDialogComponent} from '../auth-dialog/auth-dialog.component';
 })
 export class HeaderComponent {
 constructor(
-  public dialog: MatDialog
+  public dialog: MatDialog,
 ) {
 }
   openDialog() {
     let dialogConfig = new MatDialogConfig();
     const dialogRef = this.dialog.open(AuthDialogComponent, dialogConfig);
   }
+
 }

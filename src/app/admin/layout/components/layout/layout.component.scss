@@ -1,9 +1,15 @@
 .layout{
+  background: #dee6f975;
+  box-shadow: -6px -4px 10px 8px #dee6f975;
   &__header{
-    width: 20%;
+    width: 200px;
     height: 100vh;
     position: fixed;
-    background: rgba(212, 216, 211, 0.96);
+    background: rgb(186 223 255 / 35%);
+    box-shadow: -2px 0px 5px 3px #a6c8fb;
+  }
+  &__content{
+    margin-left: 205px;
 
   }
 }

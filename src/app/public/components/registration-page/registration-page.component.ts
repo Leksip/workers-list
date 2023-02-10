@@ -20,7 +20,6 @@ export class RegistrationPageComponent {
     repeatPassword: [null, [Validators.required, Validators.minLength(7)]]
   });
   isLoading = false;
-  hide1 = true;
   hide = true;
   correctivePasswords = false;
 
@@ -32,7 +31,9 @@ export class RegistrationPageComponent {
   ) {
   }
 
-
+test(){
+  this.alertService.warning('Вы успешно зарегистрировались');
+}
   onSubmit() {
     this.isLoading = true;
     let newUser: NewUser = {
@@ -43,7 +44,7 @@ export class RegistrationPageComponent {
       {
         next: () => {
           this.isLoading = false;
-          this.router.navigate(['/']);
+          this.router.navigate(['/'])
           this.closeDialog.emit();
           this.alertService.success('Вы успешно зарегистрировались');
         },

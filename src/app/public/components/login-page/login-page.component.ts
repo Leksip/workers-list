@@ -1,8 +1,9 @@
-import {Component, EventEmitter, Inject, Output} from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {AuthService} from '../../services/auth.service';
 import {Router} from '@angular/router';
 import {User} from '../../public-models';
+import {AlertService} from '../../../shared/alert.service';
 
 
 @Component({
@@ -25,6 +26,7 @@ export class LoginPageComponent {
     private fb: FormBuilder,
     public auth: AuthService,
     private router: Router,
+    private alert: AlertService
   ) {
   }
 
@@ -40,6 +42,7 @@ export class LoginPageComponent {
         next: () => {
           this.isLoading = false;
           this.router.navigate(['admin']);
+          this.alert.success('Вход выполнен');
           this.closeDialog.emit();
         },
         error: () => {
