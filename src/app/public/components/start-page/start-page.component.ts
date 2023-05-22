@@ -1,5 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {ActivatedRoute, Params} from '@angular/router';
+import {HeaderComponent} from '../header/header.component';
 
 
 @Component({
@@ -9,12 +10,14 @@ import {ActivatedRoute, Params} from '@angular/router';
 })
 export class StartPageComponent implements OnInit {
 
-  message: string;
 
+  message: string;
   constructor(
     private route: ActivatedRoute
   ) {
   }
+
+
 
   ngOnInit() {
     this.route.queryParams.subscribe((params: Params) => {
@@ -23,5 +26,6 @@ export class StartPageComponent implements OnInit {
       }
     });
   }
+
 
 }

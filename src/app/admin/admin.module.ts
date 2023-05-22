@@ -12,6 +12,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 
 
@@ -35,6 +36,7 @@ import {MatSelectModule} from '@angular/material/select';
     ReactiveFormsModule,
     MatSelectModule,
     FormsModule,
+    MatTooltipModule,
   ]
 })
 export class AdminModule { }

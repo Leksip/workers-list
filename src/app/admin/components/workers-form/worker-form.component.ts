@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, ElementRef, ViewChild} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
@@ -7,6 +7,11 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
   styleUrls: ['./worker-form.component.scss']
 })
 export class WorkerFormComponent {
+
+  @ViewChild('inputFile') inputRef: ElementRef;
+
+  image: File;
+  imagePreview: string | ArrayBuffer;
   socialList: string[] = ['vk', 'instagram', 'facebook', 'twitter'];
   form: FormGroup = this.fb.group({
     name: [null, Validators.required],
@@ -40,5 +45,19 @@ export class WorkerFormComponent {
         this.form.get('social').get(item).patchValue(null);
       }
     });
+  }
+
+  loadFile() {
+    this.inputRef.nativeElement.click();
+  }
+
+  onFileUpload(event: any) {
+    const file = event.target.files[0];
+    this.image = file;
+    const reader = new FileReader();
+    reader.onload = () => {
+      this.imagePreview = reader.result;
+    };
+    reader.readAsDataURL(file);
   }
 }

@@ -19,6 +19,7 @@ import { RegistrationPageComponent } from './components/registration-page/regist
 import {SharedModule} from '../shared/shared.module';
 
 
+
 @NgModule({
   declarations: [
     StartPageComponent,
@@ -26,7 +27,7 @@ import {SharedModule} from '../shared/shared.module';
     HeaderComponent,
     LoginPageComponent,
     AuthDialogComponent,
-    RegistrationPageComponent
+    RegistrationPageComponent,
   ],
   exports: [
     HeaderComponent,

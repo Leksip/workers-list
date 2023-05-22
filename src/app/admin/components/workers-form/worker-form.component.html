@@ -3,14 +3,14 @@
   <form [formGroup]="form">
     <div class="worker-form__input">
       <mat-form-field class="example-form-field">
-        <mat-label>Clearable input</mat-label>
-        <input matInput type="text">
+        <mat-label>Фамилия Имя Отчество</mat-label>
+        <input matInput type="text" formControlName="name">
       </mat-form-field>
     </div>
     <div class="worker-form__input">
       <mat-form-field class="example-form-field">
-        <mat-label>Clearable input</mat-label>
-        <input matInput type="text">
+        <mat-label>Дата рождения</mat-label>
+        <input matInput type="date" formControlName="birthday">
       </mat-form-field>
     </div>
     <div class="worker-form__input">
@@ -85,8 +85,21 @@
         <input matInput type="text">
       </mat-form-field>
     </div>
+    <div>
+      <input type="file" class="worker-form__input-file dn" #inputFile (change)="onFileUpload($event)">
 
+      <button type="button"
+              mat-icon-button
+              matTooltip="Добавить изображение"
+              color="primary"
+              aria-label="Example icon-button with a heart icon"
+              (click)="loadFile()">
+        <mat-icon>add_box</mat-icon>
+      </button>
+    </div>
   </form>
+  <div class="workers-form__preview">
+    <img class="workers-form__preview-image" [src]="imagePreview" alt="" *ngIf="imagePreview">
+  </div>
 </div>
 
-<button (click)="test()">sdffsd</button>
